@@ -1,0 +1,130 @@
+:root{
+    --clr-Light-Cyan: hsl(193, 38%, 86%);
+    --clr-Neon-Green: hsl(150, 100%, 66%);
+    --clr-Grayish-Blue: hsl(217, 19%, 38%);
+    --clr-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --clr-Dark-Blue: hsl(218, 23%, 16%);
+
+    --mobile-width: 90vw;
+    --mobile-height: 40vh;
+    --mobile-padding: 1rem;
+    --mobile-margin: 1.5rem;
+    --mobile-margin-large: 3rem;
+    --mobile-padding-top: 8rem;
+
+    --desktop-padding: 3rem;
+
+    --font-spacing: 4px;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--clr-Dark-Blue);
+    color: var(--clr-Light-Cyan);
+    font-family: 'Manrope', sans-serif;
+    padding: 20px;
+    padding-top: var(--mobile-padding-top);
+}
+
+.container{
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+    border-radius: 1rem;
+    background-color: var(--clr-Dark-Grayish-Blue);
+    margin-bottom: var(--mobile-margin-large);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.advice{
+    margin-bottom: var(--mobile-margin);
+    color: var(--clr-Neon-Green);
+    letter-spacing: var(--font-spacing);
+}
+
+.text{
+    font-size: 24px;
+    /* margin-bottom: var(--mobile-margin); */
+    /* margin-top:auto; */
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--clr-Neon-Green);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-49%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 6px rgba(148,232,141,0.72);
+    -webkit-box-shadow: 0 0 20px 6px rgba(148,232,141,0.72);
+    -moz-box-shadow: 0 0 20px 6px rgba(148,232,141,0.72);
+}
+
+.divider{
+    position: absolute;
+    bottom:17%;
+    transform: translateX(-50%);
+}
+
+.dice{
+    width: 20px;
+    height: 20px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50%;
+}
+
+@media (min-width:576px) {
+    body{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .container{
+        width: 600px;
+        height: 300px;
+        padding: var(--desktop-padding);
+    }
+}
