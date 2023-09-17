@@ -34,7 +34,6 @@ function getData(){
             return resp.json();
         })
         .then((dataobj) =>{
-            console.log(dataobj);
             updateUI(dataobj.slip);
         })
         .catch((err) => {
